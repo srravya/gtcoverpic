@@ -11,16 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140725193953) do
-
-  create_table "photos", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "photos_file_name"
-    t.string   "photos_content_type"
-    t.integer  "photos_file_size"
-    t.datetime "photos_updated_at"
-  end
+ActiveRecord::Schema.define(version: 20140726053130) do
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -41,6 +32,7 @@ ActiveRecord::Schema.define(version: 20140725193953) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "image"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

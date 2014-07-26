@@ -1,6 +1,6 @@
 
-<strong><%= @profile.name %></strong>
-<%= image_tag current_user.avatar.url %>
+<strong><%= current_user.name %></strong>
+<%= image_tag current_user.image_url.to_s %>
 <br><strong>Age: <%= @profile.age %></strong>
 <br><strong>Email: <%= @profile.email%></strong>
 <%= link_to "Sign Out", destroy_user_session_path , method: :delete %> 
